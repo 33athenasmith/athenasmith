@@ -1,20 +1,89 @@
 ---
+const title = "Athena Smith";
+const description = "Data Science & Statistics Student | Williamsburg, VA";
+const links = [
+  { name: "GitHub", url: "https://github.com/33athenasmith" },
+  { name: "LinkedIn", url: "https://linkedin.com/in/athenasmith" },
+  { name: "Email", url: "mailto:athena.smith@email.com" }
+];
 ---
 
-// src/pages/index.astro
-const name = "Athena Smith";
-const role = "Data Science & Statistics Student | International Relations";
-const about = `
-  I'm a college senior in Williamsburg, Virginia,
-  specializing in data science and statistics, with a strong interest
-  in law, international relations, and transitional justice.
-`;
----
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <!-- Hero/About Me -->
+      <section class="hero">
+        <h1>{title}</h1>
+        <h2>Data Science & Statistics Student</h2>
+        <p>
+          College senior in Williamsburg, Virginia specializing in SQL database 
+          management, Python data analysis, statistical hypothesis testing, and 
+          international relations research.
+        </p>
+        <a href="/resume.pdf" class="download-btn" download>
+          📄 Download Resume (PDF)
+        </a>
+      </section>
 
-<section>
-  <h1>{name}</h1>
-  <p>{role}</p>
-  <p>{about}</p>
-</section>
-</body>
+      <!-- Education -->
+      <section class="section">
+        <h2>Education</h2>
+        <div class="item">
+          <h3>College of William & Mary</h3>
+          <p><strong>B.S. Data Science & Statistics</strong> (Expected 2026)</p>
+          <p>Williamsburg, Virginia</p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section">
+        <h2>Experience & Projects</h2>
+        <div class="item">
+          <h3>NYC Health Inspections Analysis</h3>
+          <p>SQL queries and Python/pandas analysis of 500k+ restaurant inspections</p>
+          <a href="https://github.com/33athenasmith/nyc-health">View on GitHub →</a>
+        </div>
+        <div class="item">
+          <h3>Transitional Justice Research</h3>
+          <p>Post-conflict accountability systems and international law</p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section">
+        <h2>Connect</h2>
+        <ul class="links">
+          {links.map(link => (
+            <li><a href={link.url} target="_blank">{link.name}</a></li>
+          ))}
+        </ul>
+      </section>
+    </main>
+
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem; max-width: 800px; margin: 0 auto; }
+      .hero { text-align: center; padding: 4rem 0; }
+      .hero h1 { font-size: 3rem; margin: 0; }
+      .hero h2 { color: #666; margin: 0.5rem 0 1rem; }
+      .download-btn { 
+        display: inline-block; padding: 1rem 2rem; 
+        background: #0ea5e9; color: white; text-decoration: none; 
+        border-radius: 0.5rem; font-weight: bold; margin-top: 1rem;
+      }
+      .section { margin: 4rem 0; }
+      .section h2 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+      .item { margin-bottom: 2rem; }
+      .item h3 { margin: 0 0 0.5rem; color: #333; }
+      .links { list-style: none; padding: 0; display: flex; gap: 1rem; flex-wrap: wrap; }
+      .links a { color: #0ea5e9; text-decoration: none; }
+      @media (max-width: 600px) { body { padding: 1rem; } .hero h1 { font-size: 2rem; } }
+    </style>
+  </body>
 </html>
