@@ -6,80 +6,105 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Athena Smith - Data Science</title>
+  <title>Athena Smith</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&display=swap');
   
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { 
-    font-family: 'EB Garamond', 'Century Schoolbook', 'Times New Roman', serif; 
-    font-size: 16px;
-    font-weight: 400;
-    max-width: 900px; margin: 0 auto; padding: 2rem; 
-    line-height: 1.65; color: #000; background: white;
+  html, body {
+    text-align: center;
+    background: #f0f8ff; /* Very light Alice Blue */
   }
+  body { 
+    font-family: 'EB Garamond', serif; 
+    font-size: 16px; font-weight: 400;
+    max-width: 850px; margin: 0 auto; padding: 2.5rem 1rem; 
+    line-height: 1.65; color: #000; 
+  }
+  h1, h2, h3, p, a { text-align: center; }
   h1 { 
     font-family: 'EB Garamond', serif; 
-    font-size: 2.6rem; font-weight: 600; 
-    margin-bottom: 0.75rem; letter-spacing: 0.3px;
+    font-size: 2.8rem; font-weight: 600; 
+    margin: 0 0 0.75rem 0; letter-spacing: 0.5px;
   }
   h2 { 
-    font-family: 'EB Garamond', serif; 
     font-size: 1.3rem; font-weight: 500; 
-    color: #000; margin-bottom: 1.25rem; 
-    border-bottom: 1px solid #ccc; padding-bottom: 0.25rem;
+    color: #000; margin: 2.5rem 0 1.25rem 0; 
+    border-bottom: 1px solid #333; padding-bottom: 0.5rem;
+    max-width: 600px; margin-left: auto; margin-right: auto;
   }
   h3 { 
-    font-family: 'EB Garamond', serif; 
-    font-size: 1.15rem; font-weight: 500; 
-    margin: 1.75rem 0 0.75rem; 
-    border-left: 4px solid #000; padding-left: 0.75rem;
+    font-size: 1.2rem; font-weight: 500; 
+    margin: 2rem auto 0.75rem auto; 
+    border-left: 4px solid #000; padding: 0.25rem 0.75rem;
+    display: inline-block;
   }
-  p { margin-bottom: 1.25rem; }
+  p { 
+    margin: 0 auto 1.25rem auto; 
+    max-width: 650px;
+  }
   .btn { 
-    display: inline-block; padding: 12px 24px; 
+    display: inline-block; padding: 12px 28px; 
     background: #000; color: white; text-decoration: none; 
-    border-radius: 0; font-family: 'EB Garamond', serif;
-    font-size: 15px; font-weight: 500; 
-    border: 2px solid #000; margin: 1.5rem 0;
+    font-family: 'EB Garamond', serif; font-size: 15px; 
+    font-weight: 500; border: 2px solid #000; 
+    margin: 2rem auto; border-radius: 0; display: block;
   }
   .btn:hover { background: white; color: #000; }
-  section { margin: 3.5rem 0; }
+  section { margin: 3rem auto; max-width: 700px; }
   .item { margin-bottom: 2.25rem; }
   a { color: #000; text-decoration: none; }
   a:hover { text-decoration: underline; }
+  
+  /* Photo styling */
+  .profile-photo {
+    width: 180px; height: 180px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    margin: 1.5rem auto;
+    border: 4px solid #000;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
 </style>
-
 </head>
 <body>
-  <section style="text-align: center; padding: 4rem 0;">
+  <!-- NAME & TITLE -->
+  <section style="text-align: center; margin-bottom: 4rem;">
     <h1>Athena Smith</h1>
     <h2>Data Science & Statistics Student</h2>
-    <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem auto;">
-      College senior in Williamsburg, VA. SQL, Python data analysis, 
-      statistical hypothesis testing, international relations research.
+    <img src="/profile.jpg" alt="Athena Smith" class="profile-photo">
+    <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto;">
+      College senior at College of William & Mary, Williamsburg, VA.<br>
+      Specializing in SQL database management, Python/pandas data analysis,<br>
+      statistical hypothesis testing, and international relations research.
     </p>
-    <a href="/resume.pdf" class="btn" download>📄 Download Resume</a>
+    <a href="/resume.pdf" class="btn" download>📄 Download Full Resume (PDF)</a>
   </section>
 
+  <!-- EDUCATION -->
   <section>
-    <h2 style="border-bottom: 3px solid #eee; padding-bottom: 1rem;">Education</h2>
-    <div class="item">
+    <h2>Education</h2>
+    <div style="margin-bottom: 2.5rem;">
       <h3>College of William & Mary</h3>
       <p><strong>B.S. Data Science & Statistics</strong> (Expected 2026)</p>
       <p>Williamsburg, Virginia</p>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section>
-    <h2 style="border-bottom: 3px solid #eee; padding-bottom: 1rem;">Experience</h2>
-    <div class="item">
+    <h2>Experience & Projects</h2>
+    <div style="margin-bottom: 2rem;">
       <h3>NYC Health Inspections Analysis</h3>
-      <p>SQL queries + Python/pandas analysis of 500k+ restaurant inspections</p>
-      <a href="https://github.com/33athenasmith/nyc-health" style="color: #0ea5e9;">GitHub</a>
+      <p>Comprehensive data pipeline using SQL queries and Python/pandas to analyze 500k+ restaurant inspection records. Performed statistical hypothesis testing and data visualization.</p>
+      <p><a href="https://github.com/33athenasmith/nyc-health">View project on GitHub</a></p>
+    </div>
+    <div>
+      <h3>Transitional Justice Research</h3>
+      <p>Researching post-conflict accountability systems and international law mechanisms for transitional justice.</p>
     </div>
   </section>
 </body>
 </html>
-
 
