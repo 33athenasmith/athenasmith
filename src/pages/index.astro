@@ -1,8 +1,5 @@
 ---
-// 1. FRONTMATTER: This is where imports go.
-// If you haven't created the Navigation.astro file yet, 
-// you can comment out the line below by adding // at the start.
-// import Navigation from '../components/Navigation.astro';
+// This is the correct FRONTMATTER
 ---
 
 <!DOCTYPE html>
@@ -10,16 +7,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <title>Athena Smith | Data Science</title>
 </head>
 <body>
 
   <nav class="tabs">
     <div class="nav-container">
-      <a href="/" class="active">Home</a>
-      <a href="/resume">Resume</a>
-      <a href="/blog">Blog</a>
+      <a href="./" class="active">Home</a>
+      <a href="./resume">Resume</a>
+      <a href="./blog">Blog</a>
     </div>
   </nav>
 
@@ -35,7 +31,7 @@
         statistical hypothesis testing, and international relations research.
       </p>
       
-      <a href="/resume.pdf" class="btn" download>📄 Download Full Resume (PDF)</a>
+      <a href="./resume.pdf" class="btn" download>📄 Download Full Resume (PDF)</a>
     </section>
 
     <section>
@@ -63,10 +59,8 @@
   </main>
 
 </body>
-</html>
 
 <style>
-  /* 2. STYLE: Scoped CSS goes here. No <style> tags inside <head> needed. */
   @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&display=swap');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -76,7 +70,6 @@
     color: #000;
     font-family: 'EB Garamond', serif;
     line-height: 1.65;
-    /* This ensures everything in the body is centered as a column */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,7 +85,6 @@
     align-items: center;
   }
 
-  /* NAVIGATION STYLING */
   .tabs {
     width: 100%;
     background: #fff;
@@ -104,10 +96,9 @@
     top: 0;
     z-index: 100;
   }
-  .nav-container {
-    display: flex;
-    gap: 2.5rem;
-  }
+
+  .nav-container { display: flex; gap: 2.5rem; }
+
   .nav-container a {
     text-decoration: none;
     color: #555;
@@ -115,12 +106,12 @@
     font-size: 1.1rem;
     transition: color 0.3s;
   }
+
   .nav-container a:hover, .nav-container a.active {
     color: #000;
     border-bottom: 2px solid #000;
   }
 
-  /* CONTENT STYLING */
   section {
     width: 100%;
     max-width: 700px;
@@ -128,11 +119,7 @@
     text-align: center;
   }
 
-  h1 { 
-    font-size: 3rem; 
-    font-weight: 600; 
-    margin-bottom: 0.5rem; 
-  }
+  h1 { font-size: 3rem; font-weight: 600; margin-bottom: 0.5rem; }
 
   .section-title { 
     font-size: 1.4rem; 
@@ -143,10 +130,7 @@
     margin-bottom: 2rem;
   }
 
-  h3 { 
-    font-size: 1.25rem; 
-    margin: 1.5rem 0 0.5rem 0; 
-  }
+  h3 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem 0; }
 
   .profile-photo {
     width: 180px;
@@ -167,57 +151,13 @@
     color: #fff;
     text-decoration: none;
     border: 2px solid #000;
-    transition: all 0.3s ease;
   }
 
-  .btn:hover {
-    background: transparent;
-    color: #000;
-  }
+  .btn:hover { background: transparent; color: #000; }
 
   .item { margin-bottom: 2.5rem; }
   
   a { color: #000; text-decoration: underline; text-underline-offset: 3px; }
-  a:hover { opacity: 0.7; }
 </style>
-</head>
-<body>
-  <!-- NAME & TITLE -->
-  <section style="text-align: center; margin-bottom: 4rem;">
-    <h1>Athena Smith</h1>
-    <h2>Data Science & Statistics Student</h2>
-    <img src="/profile.jpg" alt="Athena Smith" class="profile-photo">
-    <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto;">
-      College senior at College of William & Mary, Williamsburg, VA.<br>
-      Specializing in SQL database management, Python/pandas data analysis,<br>
-      statistical hypothesis testing, and international relations research.
-    </p>
-    <a href="/resume.pdf" class="btn" download>📄 Download Full Resume (PDF)</a>
-  </section>
-
-  <!-- EDUCATION -->
-  <section>
-    <h2>Education</h2>
-    <div style="margin-bottom: 2.5rem;">
-      <h3>College of William & Mary</h3>
-      <p><strong>B.S. Data Science & Statistics</strong> (Expected 2026)</p>
-      <p>Williamsburg, Virginia</p>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section>
-    <h2>Experience & Projects</h2>
-    <div style="margin-bottom: 2rem;">
-      <h3>NYC Health Inspections Analysis</h3>
-      <p>Comprehensive data pipeline using SQL queries and Python/pandas to analyze 500k+ restaurant inspection records. Performed statistical hypothesis testing and data visualization.</p>
-      <p><a href="https://github.com/33athenasmith/nyc-health">View project on GitHub</a></p>
-    </div>
-    <div>
-      <h3>Transitional Justice Research </h3>
-      <p>Researching post-conflict accountability systems and international law mechanisms for transitional justice.</p>
-    </div>
-  </section>
-</body>
 </html>
 
