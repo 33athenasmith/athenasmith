@@ -1,0 +1,158 @@
+---
+// src/pages/resume.astro
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Resume | Athena Smith</title>
+</head>
+<body>
+
+  <nav class="tabs">
+    <div class="nav-container">
+      <a href="../">Home</a>
+      <a href="./" class="active">Resume</a>
+      <a href="../blog">Blog</a>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <h1 class="resume-name">Athena Smith</h1>
+      <p class="contact-info">aasmith@wm.edu | 727-710-0377 | Williamsburg, Virginia</p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <h3>College of William & Mary</h3>
+        <p><strong>B.S. Government and Data Science</strong> (GPA: 3.8)</p>
+        <p>August 2022 - May 2026 | Williamsburg, VA</p>
+        <p class="details">Honors: Dean's List (multiple semesters); Democracy Summer Scholar</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Research Experience</h2>
+      <div class="item">
+        <h3>U.S. Democratic Erosion Events Database (U.S. DEED)</h3>
+        <p><strong>Project Manager</strong> | December 2024 - Present</p>
+        <p class="details">Manage undergraduate research assistants and code event-based datasets regarding democratic erosion across all 50 U.S. states.</p>
+      </div>
+      
+      <div class="item">
+        <h3>Teaching, Research, and International Policy (TRIP) Project</h3>
+        <p><strong>Research Assistant</strong> | May 2025 - Present</p>
+        <p class="details">Conduct research on international relations scholars and write analytical blog posts on survey data.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Skills & Publications</h2>
+      <div class="item">
+        <h3>Technical Skills</h3>
+        <p>Python (NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn), SQL, Microsoft Excel, SPSS Statistics</p>
+      </div>
+      
+      <div class="item">
+        <h3>Languages</h3>
+        <p>Limited working proficiency in Greek and French</p>
+      </div>
+
+      <div class="item">
+        <h3>Selected Publications</h3>
+        <p class="details">"Scholarly Perspectives on President Trump's First 100 Days..." - W&M Global Research Institute</p>
+        <p class="details">"Division and Dialogue: Ethno-Sectarian Post-Conflict Reconciliation..." - W&M Law School</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    /* Matching Light blue background */
+    background-color: #e0f2fe; 
+    /* Matching Minimalist white polka dots */
+    background-image: radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 25px 25px;
+    
+    color: #000;
+    font-family: 'EB Garamond', serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  main {
+    width: 100%;
+    max-width: 850px;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-container { display: flex; gap: 2.5rem; }
+
+  .nav-container a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  .nav-container a:hover, .nav-container a.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+
+  section {
+    width: 100%;
+    max-width: 750px;
+    margin-bottom: 3.5rem;
+    text-align: center;
+  }
+
+  .resume-name { font-size: 2.5rem; font-weight: 600; margin-bottom: 0.25rem; }
+  .contact-info { font-size: 1.1rem; margin-bottom: 2rem; color: #444; }
+
+  .section-title { 
+    font-size: 1.3rem; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 { font-size: 1.25rem; margin: 1rem 0 0.25rem 0; }
+  
+  .details { font-size: 0.95rem; font-style: italic; color: #333; margin-top: 0.25rem; }
+
+  .item { margin-bottom: 1.5rem; }
+</style>
+</html>
