@@ -65,7 +65,12 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html, body {
-    background: #f0f8ff;
+    /* Light blue background */
+    background-color: #e0f2fe; 
+    /* Minimalist white polka dots */
+    background-image: radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 25px 25px;
+    
     color: #000;
     font-family: 'EB Garamond', serif;
     line-height: 1.65;
@@ -73,6 +78,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    min-height: 100vh;
   }
 
   main {
@@ -132,28 +138,16 @@
   h3 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem 0; }
 
   .profile-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 2rem auto;
-  /* CHANGED BLACK (#000) TO DARK BLUE (#000080) */
-  border: 4px solid #000080;
-  display: block;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-  .btn {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 12px 30px;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #000;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2rem auto;
+    /* Pale yellow circle */
+    border: 4px solid #fef9c3; 
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   }
-
-  .btn:hover { background: transparent; color: #000; }
 
   .item { margin-bottom: 2.5rem; }
   
