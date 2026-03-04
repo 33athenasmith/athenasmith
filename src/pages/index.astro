@@ -65,9 +65,7 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html, body {
-    /* Light blue background */
     background-color: #e0f2fe; 
-    /* Minimalist white polka dots */
     background-image: radial-gradient(#ffffff 1px, transparent 1px);
     background-size: 25px 25px;
     
@@ -125,18 +123,36 @@
   }
 
   h1 { 
-  font-size: 3rem; 
-  font-weight: 600; 
-  margin-bottom: 0.5rem; 
-  /* This adds the spacing */
-  letter-spacing: 4px; 
-  /* This ensures the font itself is clean */
-  text-transform: none; 
-}
+    font-size: 3rem; 
+    font-weight: 600; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: 4px; 
+    text-transform: none; 
+  }
 
-h1 em {
-  font-style: italic;
-}
+  h1 em {
+    font-style: italic;
+  }
+
+  /* --- NEW H2 STYLING --- */
+  h2 {
+    font-size: 1.1rem;      /* Smaller size */
+    font-weight: 400;       /* Lighter weight */
+    text-transform: uppercase;
+    letter-spacing: 2px;    /* Elegant spacing */
+    margin-top: -0.8rem;    /* Pulls it up closer to your name */
+    color: #444;            /* Soft dark grey */
+  }
+
+  .section-title { 
+    font-size: 1.4rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem; /* Adds space above section headers */
+  }
 
   h3 { font-size: 1.25rem; margin: 1.5rem 0 0.5rem 0; }
 
@@ -145,8 +161,7 @@ h1 em {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 2rem auto;
-    /* Pale yellow circle */
+    margin: 2.5rem auto; /* Added a bit more space above the photo */
     border: 4px solid #fef9c3; 
     display: block;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -157,4 +172,3 @@ h1 em {
   a { color: #000; text-decoration: underline; text-underline-offset: 3px; }
 </style>
 </html>
-
