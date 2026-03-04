@@ -1,4 +1,8 @@
 ---
+// 1. FRONTMATTER: This is where imports go.
+// If you haven't created the Navigation.astro file yet, 
+// you can comment out the line below by adding // at the start.
+// import Navigation from '../components/Navigation.astro';
 ---
 
 <!DOCTYPE html>
@@ -6,84 +10,175 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Athena Smith</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>Athena Smith | Data Science</title>
+</head>
+<body>
+
+  <nav class="tabs">
+    <div class="nav-container">
+      <a href="/" class="active">Home</a>
+      <a href="/resume">Resume</a>
+      <a href="/blog">Blog</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Athena Smith</h1>
+      <h2>Data Science & Statistics Student</h2>
+      <img src="/profile.jpg" alt="Athena Smith" class="profile-photo" />
+      
+      <p class="bio">
+        College senior at College of William & Mary, Williamsburg, VA.<br>
+        Specializing in SQL database management, Python/pandas data analysis,<br>
+        statistical hypothesis testing, and international relations research.
+      </p>
+      
+      <a href="/resume.pdf" class="btn" download>📄 Download Full Resume (PDF)</a>
+    </section>
+
+    <section>
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <h3>College of William & Mary</h3>
+        <p><strong>B.S. Data Science & Statistics</strong> (Expected 2026)</p>
+        <p>Williamsburg, Virginia</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Experience & Projects</h2>
+      <div class="item">
+        <h3>NYC Health Inspections Analysis</h3>
+        <p>Comprehensive data pipeline using SQL queries and Python/pandas to analyze 500k+ restaurant inspection records. Performed statistical hypothesis testing and data visualization.</p>
+        <p><a href="https://github.com/33athenasmith/nyc-health">View project on GitHub</a></p>
+      </div>
+      
+      <div class="item">
+        <h3>Transitional Justice Research</h3>
+        <p>Researching post-conflict accountability systems and international law mechanisms for transitional justice.</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+
 <style>
-  <style>
+  /* 2. STYLE: Scoped CSS goes here. No <style> tags inside <head> needed. */
   @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&display=swap');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   html, body {
     background: #f0f8ff;
-    text-align: center; /* Fallback centering */
-  }
-
-  body { 
-    font-family: 'EB Garamond', serif; 
-    font-size: 16px; 
-    line-height: 1.65; 
-    color: #000; 
-    padding: 2.5rem 1rem;
-    /* Use flex to center the main content column */
+    color: #000;
+    font-family: 'EB Garamond', serif;
+    line-height: 1.65;
+    /* This ensures everything in the body is centered as a column */
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
+    width: 100%;
   }
 
-  /* Constraint for the content width */
-  section, .item {
+  main {
+    width: 100%;
+    max-width: 850px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* NAVIGATION STYLING */
+  .tabs {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-container {
+    display: flex;
+    gap: 2.5rem;
+  }
+  .nav-container a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  .nav-container a:hover, .nav-container a.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+
+  /* CONTENT STYLING */
+  section {
     width: 100%;
     max-width: 700px;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
   }
 
   h1 { 
-    font-size: 2.8rem; font-weight: 600; 
-    margin-bottom: 0.75rem;
+    font-size: 3rem; 
+    font-weight: 600; 
+    margin-bottom: 0.5rem; 
   }
 
-  h2 { 
-    font-size: 1.3rem; font-weight: 500; 
-    margin: 2.5rem auto 1.25rem auto; 
-    border-bottom: 1px solid #333; 
+  .section-title { 
+    font-size: 1.4rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #333;
     padding-bottom: 0.5rem;
-    max-width: 600px;
+    margin-bottom: 2rem;
   }
 
   h3 { 
-    font-size: 1.2rem; font-weight: 600; 
-    margin: 1.5rem auto 0.5rem auto;
-    /* Removed border-left to keep text visually centered */
-    display: block;
+    font-size: 1.25rem; 
+    margin: 1.5rem 0 0.5rem 0; 
   }
-
-  p { 
-    margin: 0 auto 1.25rem auto; 
-    max-width: 650px;
-  }
-
-  .btn { 
-    display: inline-block; 
-    padding: 12px 28px; 
-    background: #000; color: white; 
-    text-decoration: none; 
-    border: 2px solid #000; 
-    margin-top: 1rem;
-    transition: 0.3s;
-  }
-
-  .btn:hover { background: white; color: #000; }
 
   .profile-photo {
-    width: 180px; height: 180px; 
-    border-radius: 50%; 
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
     object-fit: cover;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
     border: 4px solid #000;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   }
 
-  a { color: #000; text-decoration: underline; }
+  .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 12px 30px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: transparent;
+    color: #000;
+  }
+
+  .item { margin-bottom: 2.5rem; }
+  
+  a { color: #000; text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { opacity: 0.7; }
 </style>
 </head>
 <body>
