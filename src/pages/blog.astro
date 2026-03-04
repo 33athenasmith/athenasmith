@@ -1,0 +1,158 @@
+---
+// src/pages/blog.astro
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Blog | Athena Smith</title>
+</head>
+<body>
+
+  <nav class="tabs">
+    <div class="nav-container">
+      <a href="../">Home</a>
+      <a href="../resume">Resume</a>
+      <a href="./" class="active">Blog</a>
+    </div>
+  </nav>
+
+  <main>
+    <article class="post">
+      <header class="post-header">
+        <p class="post-date">March 3, 2026</p>
+        <h1 class="post-title">Scholarly Perspectives on President Trump’s First 100 Days and the International Institutional Order</h1>
+        <div class="title-divider"></div>
+      </header>
+
+      <section class="post-content">
+        <h2>Introduction</h2>
+        <p>
+          Scholars of international organizations overwhelmingly evaluated President Trump’s foreign policy within his first 100 days as negative, and they did so at consistently higher rates than the broader community of international relations scholars. These findings suggest experts viewed Trump’s early actions as damaging to the international order. The international order often hinges on support for institutions' rules and cooperative frameworks; for example, withdrawals from agreements such as the Paris Climate Accord or threats to NATO’s defense commitments can erode these rules. 
+        </p>
+        <p>
+          Using TRIP’s data from Snap Poll XXII, this post compares those evaluations across paradigms and between International Organization (IO) scholars and the broader IR community to show how theoretical orientation and specialization shaped assessments of President Trump’s foreign policy in his first 100 days. In President Trump’s first 100 days, he withdrew from the Paris Climate Agreement and the World Health Organization. He also shut down the U.S. Agency for International Development (USAID) and retreated from engagement with numerous United Nations bodies. 
+        </p>
+
+        <h2>Current Practice</h2>
+        <p>
+          One of President Trump’s first executive orders, signed February 4th, 2025, is titled: “Withdrawing the United States From and Ending Funding to Certain United Nations Organizations and Reviewing United States Support to All International Organizations.” This order targets the UN Human Rights Council (HRC), the UN Educational, Scientific, and Cultural Organization (UNESCO), and the UN Relief and Works Agency for Palestinian Refugees in the Near East (UNRWA). 
+        </p>
+        <p>
+          President Trump argued that these institutions “act[ed] contrary to the interests of the United States,” “propagat[ed] anti-Semitism,” and “demonstrat[ed] anti-Israel sentiment.” He also sanctioned the International Criminal Court, primarily due to its investigations of Israeli officials. As part of this executive order, within 180 days the Secretary of State was to review all intergovernmental organizations the United States is a member of and to determine if they conflict with the interests of the United States.
+        </p>
+
+        <h2>Data and Analysis</h2>
+        <p>
+          On the question of how President Trump has performed in the area of foreign policy during his first 100 days in office, <strong>82.3% of scholars rated the president “very poorly.”</strong> Additionally, 95.7% of scholars said that compared with the past, the United States is less respected by other countries today. Sixty-one percent of scholars said the withdrawal from the Paris Agreement would significantly worsen perceptions of the U.S. as a global leader, and 64% said the same of the withdrawal from the World Health Organization.
+        </p>
+        
+        <div class="data-callout">
+          <p><em>Paradigm Comparison: Scholars responding "Very Poorly" on Foreign Policy</em></p>
+          <ul>
+            <li><strong>Realists:</strong> 64.7%</li>
+            <li><strong>Liberals:</strong> 86.46%</li>
+            <li><strong>Constructivists:</strong> 89%</li>
+            <li><strong>Non-Paradigmatic:</strong> 83.5%</li>
+          </ul>
+        </div>
+
+        <p>
+          Individual paradigms reflect personal perspectives on the significance of policies for the international order. Scholars who believe states are self-interested (Realists) saw the policies more positively compared to those who believe norms and institutions are more salient (Liberals and Constructivists). Liberals and constructivists believe in the importance of international organizations which shape state power, while realists believe that national interests and power determine behaviors, leaving them more skeptical about liberal internationalism. 
+        </p>
+
+        <h2>Conclusion & Future Implications</h2>
+        <p>
+          Concerned evaluations from IR scholars reflect the reality that the role of the United States in the international order has shifted in President Trump’s first 100 days, as his “America First” program questions and weakens international norms and processes. A fragmented American approach to international norms will make it more difficult for other states to maintain their commitments to existing standards and solve global challenges. President Trump’s early foreign policy decisions raise critical questions about the resilience of global cooperation.
+        </p>
+      </section>
+    </article>
+  </main>
+
+</body>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background-color: #e0f2fe; 
+    background-image: radial-gradient(#ffffff 1px, transparent 1px);
+    background-size: 25px 25px;
+    color: #000;
+    font-family: 'EB Garamond', serif;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  main {
+    width: 100%;
+    max-width: 850px;
+    padding: 3rem 1rem;
+  }
+
+  /* NAVIGATION */
+  .tabs {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-container { display: flex; gap: 2.5rem; }
+  .nav-container a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  .nav-container a:hover, .nav-container a.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+
+  /* ARTICLE STYLING */
+  .post {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+  .post-header { text-align: center; margin-bottom: 3rem; }
+  .post-date { font-style: italic; color: #666; margin-bottom: 0.5rem; }
+  .post-title { font-size: 2.2rem; line-height: 1.2; margin-bottom: 1.5rem; }
+  .title-divider { width: 60px; height: 2px; background: #000; margin: 0 auto; }
+
+  h2 { 
+    font-size: 1.4rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin: 2.5rem 0 1rem 0;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+  }
+
+  p { margin-bottom: 1.5rem; font-size: 1.15rem; text-align: justify; }
+
+  .data-callout {
+    background: #f8fafc;
+    border-left: 4px solid #000;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  .data-callout ul { list-style: none; margin-top: 0.5rem; }
+  .data-callout li { font-size: 1.1rem; margin-bottom: 0.25rem; }
+</style>
+</html>
